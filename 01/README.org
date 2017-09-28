@@ -19,7 +19,7 @@
 *** Development environment
     You will need to install a development environment.  How you do
     this depends on your operating system and programming language.
-    Follow instructions on learn.gold to identify what you need to do,
+    Follow [[https://learn.gold.ac.uk/mod/url/view.php?id=483436][instructions on learn.gold]] to identify what you need to do,
     and the respective installation procedures for the software you
     need to get started.
 ** Getting the lab distribution
