@@ -6,4 +6,8 @@
 #+LaTeX_HEADER: \setmathfont{Libertinus Math}
 #+LaTeX_HEADER: \usepackage[margin=1in]{geometry}
 #+LaTeX_HEADER: \usepackage{algpseudocode}
+#+LaTeX_HEADER: \algnewcommand\algorithmicbreak{\textbf{break}}
+#+LaTeX_HEADER: \algnewcommand\Break{\algorithmicbreak{} }%
+#+LaTeX_HEADER: \algnewcommand\algorithmiccontinue{\textbf{continue}}
+#+LaTeX_HEADER: \algnewcommand\Continue{\algorithmiccontinue{} }%
 #+LaTeX_HEADER: \MakeRobust{\Call}
