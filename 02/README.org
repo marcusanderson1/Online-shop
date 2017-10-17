@@ -58,7 +58,7 @@ to [[https://learn.gold.ac.uk/mod/lti/view.php?id=487683][submit]] before the en
 \begin{algorithmic}[1]
   \Function{Exercise1}{v}
   \State{a ← 0; b ← 0}
-  \For{i ≤ 0 < \Call{length}{v}}
+  \For{0 ≤ i < \Call{length}{v}}
   \If{v[i] > b}
   \If{v[i] > a}
   \State{b ← a}
