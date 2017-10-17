@@ -12,3 +12,5 @@ CPPUNITDIR = /Users/Shared/CppUnit
 CPPFLAGS += -I$(CPPUNITDIR)/include -I/usr/local/include
 LDFLAGS += -L$(CPPUNITDIR)/lib -L/usr/local/lib
 endif
+
+CPPFLAGS += -I../../00/cpp
