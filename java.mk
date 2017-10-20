@@ -17,6 +17,7 @@ ifeq ($(OS),Windows_NT)
       # JAVA =
     endif
   endif
+  endif
 else
   JAVAC = javac
   JAVA = java
