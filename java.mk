@@ -3,7 +3,7 @@ ifeq ($(OS),Windows_NT)
     JAVAC = /c/Program\ Files/Java/jdk1.8.0_144/bin/javac
     JAVA = /c/Program\ Files/Java/jdk1.8.0_144/bin/java
   else
-  ifneq ($(wildccard /c/Program\ Files/Java/jdk1.8.0_151),)
+  ifneq ($(wildcard /c/Program\ Files/Java/jdk1.8.0_151),)
     JAVAC = /c/Program\ Files/Java/jdk1.8.0_151/bin/javac
     JAVA = /c/Program\ Files/Java/jdk1.8.0_151/bin/java
   else
