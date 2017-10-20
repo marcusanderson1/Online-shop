@@ -25,21 +25,21 @@ public:
 
 void DynamicArrayTest::testConstructor() {
   DynamicArray *a = new DynamicArray(10);
-  CPPUNIT_ASSERT_EQUAL_MESSAGE("A fresh dynamic array should have zero length", 0UL, a->length());
+  CPPUNIT_ASSERT_EQUAL_MESSAGE("A fresh dynamic array should have zero length", ((size_t) 0UL), a->length());
   delete a;
 }
 
 void DynamicArrayTest::testSmall() {
   DynamicArray *a = new DynamicArray(10);
   a->push(1);
-  CPPUNIT_ASSERT_EQUAL(1UL, a->length());
+  CPPUNIT_ASSERT_EQUAL(((size_t) 1UL), a->length());
   CPPUNIT_ASSERT_EQUAL(1, a->select(0));
   a->push(3);
-  CPPUNIT_ASSERT_EQUAL(2UL, a->length());
+  CPPUNIT_ASSERT_EQUAL(((size_t) 2UL), a->length());
   CPPUNIT_ASSERT_EQUAL(1, a->select(0));
   CPPUNIT_ASSERT_EQUAL(3, a->select(1));
   a->store(2, 0UL);
-  CPPUNIT_ASSERT_EQUAL(2UL, a->length());
+  CPPUNIT_ASSERT_EQUAL(((size_t) 2UL), a->length());
   CPPUNIT_ASSERT_EQUAL(2, a->select(0));
   CPPUNIT_ASSERT_EQUAL(3, a->select(1));
   delete a;
@@ -50,7 +50,7 @@ void DynamicArrayTest::testLargePush() {
   for (int i = 0; i < 100; i++) {
     a->push(i);
   }
-  CPPUNIT_ASSERT_EQUAL(100UL, a->length());
+  CPPUNIT_ASSERT_EQUAL(((size_t) 100UL), a->length());
   CPPUNIT_ASSERT_EQUAL(99, a->select(99));
   CPPUNIT_ASSERT_EQUAL(3, a->select(3));
   delete a;
