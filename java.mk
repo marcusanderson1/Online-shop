@@ -1,22 +1,19 @@
 ifeq ($(OS),Windows_NT)
-  ifneq ($(wildcard /c/Program\ Files/Java/jdk1.8.0_144),)
-    JAVAC = /c/Program\ Files/Java/jdk1.8.0_144/bin/javac
-    JAVA = /c/Program\ Files/Java/jdk1.8.0_144/bin/java
+  ifneq ($(wildcard /c/Program\ Files/Java/jdk1.8*),)
+    JDIR = $(wordlist 1,2,$(wildcard /c/Program\ Files/Java/jdk1.8*))
+    JAVAC = "$(JDIR)"/bin/javac
+    JAVA = "$(JDIR)"/bin/java
   else
-  ifneq ($(wildcard /c/Program\ Files/Java/jdk1.8.0_151),)
-    JAVAC = /c/Program\ Files/Java/jdk1.8.0_151/bin/javac
-    JAVA = /c/Program\ Files/Java/jdk1.8.0_151/bin/java
-  else
-    ifneq ($(wildcard /c/Program\ Files/Java/jdk-9),)
-      JAVAC = /c/Program\ Files/Java/jdk-9/bin/javac
-      JAVA = /c/Program\ Files/Java/jdk-9/bin/java
+    ifneq ($(wildcard /c/Program\ Files/Java/jdk-9*),)
+      JDIR = $(wordlist 1,2,$(wildcard /c/Program\ Files/Java/jdk-9*))
+      JAVAC = "$(JDIR)"/bin/javac
+      JAVA = "$(JDIR)"/bin/java
     else
       ## remove the # symbols from the two lines below, and write in
-      ## the path to javac and java on your system
-      # JAVAC =
-      # JAVA =
+      ## the path to javac and java on your system, such as
+      # JAVAC = /c/Program\ Files/Java/jdk-18.3/bin/javac
+      # JAVA = /c/Program\ Files/Java/jdk-18.3/bin/java
     endif
-  endif
   endif
 else
   JAVAC = javac
